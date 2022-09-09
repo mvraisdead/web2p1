@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset=utf-8" />
+        <title>Ejemplo de código JavaScript en el mismo documento</title>
+        <script>
+            function modifica_parrafo(){
+                var text = "";
+                var i;
+                for (i = 0; i < 5; i++) {
+                    text += "The number is " + i + "<br>";
+                }
+                document.getElementById("demo").innerHTML = text;
+            }
+        </script>
+    </head>
+
+    <body>
+        <h2>JavaScript Loops</h2>
+        <p id="demo" onclick="modifica_parrafo()"> click</p>
+    </body>
+</html>

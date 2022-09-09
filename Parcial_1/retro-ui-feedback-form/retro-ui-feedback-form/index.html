@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Inicio de sesion</title>
+  <link rel="stylesheet" media="all" href="style.css" />
+</head>
+<body>
+
+  <script type="text/javascript">
+    
+
+    function valida_usuario(){
+      var cuser="admin";
+      var cpass="admin";
+      var error="";
+      var val1= document.getElementById("us").value;
+      var val2= document.getElementById("pass").value;
+
+      if (val1=="")alert("Falta usuario");
+      if (val2=="")alert("Falta contraseña");
+      else{
+        if(val1==cuser && val2==cpass){
+        alert("Correcto");
+        window.location.href="https://sites.google.com/view/programacionwebii/home";
+
+        }else alert("algo salio mal :(");
+      }
+
+      
+
+    }
+    
+  </script>
+
+  <div class="feedback-card">
+  <div class="feedback-header">
+    Inicio de sesión
+  </div>
+  <form class="feedback-body">
+    <input type="email" class="feedback-body__email" placeholder="Usuario" id="us"/>
+    <input type="password" class="feedback-body__message" placeholder="Contraseña"/ id="pass">
+  </form>
+  
+</div>
+<button class="feedback-body_button" id="site" onclick="valida_usuario()">Enviar
+</button>
+<footer>
+  <br><br><br><br><br><br>
+  <div class="feedback-card">
+  Romero Galaviz Victor Isaias--171624--Programacion web II--Semestre Otoño 2022</div>
+</footer>
+</body>
+</html>

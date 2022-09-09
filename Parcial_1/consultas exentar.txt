@@ -1,0 +1,18 @@
+SELECT producto.nombre, producto.descricion, MIN(precio) FROM producto;
+
+SELECT AVG(precio) 'Promedio de precios' FROM producto;
+
+SELECT producto.nombre, producto.precio, producto.marca
+FROM producto 
+INNER JOIN pedido ON 
+producto.idproducto=pedido.idp
+WHERE pedido.idpedido = 3;
+
+SELECT COUNT(*) FROM pedido WHERE idpedido =1
+
+SELECT * FROM pedido WHERE fecha BETWEEN "2000-01-01" AND "2022-12-30";
+
+SELECT cliente.nombre, cliente.direccion
+FROM cliente 
+INNER JOIN pedido ON 
+cliente.idcliente=pedido.idc

@@ -1,0 +1,36 @@
+SELECT * FROM equipo WHERE nombre LIKE "A%";
+
+SELECT nombre, posicion FROM jugadores ORDER BY posicion;
+
+SELECT * FROM partidos WHERE fecha BETWEEN "1990-01-01" AND "2021-09-01";
+
+SELECT * FROM jugadores WHERE goles > 0
+
+SELECT jugadores.nombre, jugadores.numero, jugadores.equipo
+FROM jugadores 
+INNER JOIN partidos ON 
+jugadores.equipo=partidos.equipo1 OR
+jugadores.equipo=partidos.equipo2
+WHERE partidos.idpartido=2;
+
+SELECT nombre, posicion, goles FROM jugadores WHERE posicion = 'Delantero' AND goles = 0;
+
+DELETE jugadores FROM jugadores INNER JOIN partidos ON 
+jugadores.id_equipo= partidos.id_local OR 
+jugadores.id_equipo = partidos.id_visitante
+WHERE partidos.idpartido = 1 AND jugadores.posicion='Defensa';
+
+SELECT COUNT(*) FROM jugadores INNER JOIN partidos ON 
+jugadores.equipo= partidos.equipo1 OR 
+jugadores.equipo = partidos.equipo2 WHERE 
+jugadores.idjugador=2;
+
+SELECT AVG(goles) 'Promedio de goles' FROM jugadores; 
+/////////////////////////////////////////////////////////
+SELECT AVG (partidos.goles1 + partidos.goles2) AS 'Promedio de goles' FROM jugadores, partidos;
+
+UPDATE jugadores SET posicion='Defensa' WHERE jugadores.idjugador= 3;
+
+SELECT nombre, posicion, MAX(goles) FROM jugadores;
+
+DESCRIBE jugadores

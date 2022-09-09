@@ -1,0 +1,59 @@
+<script type="text/javascript">
+    function calcula_resta() {
+        var numero1 = document.getElementById("numero1").value;
+        var impuestos = 1.16;
+        var gastosEnvio = 10;
+        var resultado = (numero1 * impuestos)+gastosEnvio;
+        document.getElementById('lbResultado').innerHTML = resultado;
+    }
+    </script>
+    <form>
+    <p>
+        <b>Calculadora del precio de un producto con IVA y envio.</b>
+        <br/><br/>
+    </p>
+    Precio del articulo
+    <br/>
+    <input id="numero1" type="number"/>
+    <br/><br/> 
+    <p>Aparte del IVA que es un 16% del valor del articulo se va aÃ±adir $10 de el envio.</p>
+    <br/>
+    <input type="button" value="Calcular" onclick="calcula_resta()"/><br/>
+    </form>
+    <div id="resultado">
+    <label id="lbResultado">test</label>
+    </div>
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <script type="text/javascript">
+            function calcula_resta() {
+                var numero1 = document.getElementById("numero1").value;
+                var impuestos = 1.16;
+                var gastosEnvio = 10;
+                var resultado = (numero1 * impuestos)+gastosEnvio;
+                document.getElementById('lbResultado').innerHTML = resultado;
+            }
+        </script>
+    </head>
+    <body>
+        <form>
+            <p>
+                <b>Calculadora del precio de un producto con IVA y envio.</b>
+                <br/><br/>
+            </p>
+            Precio del articulo
+            <br/>
+            <input id="numero1" type="number"/>
+            <br/><br/> 
+            <p>Aparte del IVA que es un 16% del valor del articulo se va aÃ±adir $10 de el envio.</p>
+            <br/>
+            <input type="button" value="Calcular" onclick="calcula_resta()"/><br/>
+        </form>
+        <div id="resultado">
+            <label id="lbResultado">test</label>
+        </div>
+    </body>
+</html>
