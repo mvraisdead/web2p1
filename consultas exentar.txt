@@ -1,0 +1,12 @@
+SELECT * FROM alumnos WHERE idc = 2 OR idc = 3;
+
+SELECT nombre FROM doctores INNER JOIN consultas ON doctores.idmedico = consultas.idm;
+
+SELECT nombre, idc, idalumno FROM alumnos INNER JOIN expedientes ON alumnos.idalumno = expedientes.ida WHERE expedientes.tiposangre = 'AB+';
+
+SELECT COUNT(*) FROM consultas WHERE ida IN ( SELECT ida FROM consultas WHERE ida = 10 );
+
+DELETE consultas FROM consultas WHERE fecha = '2021-09-09'
+
+SELECT alumnos.nombre, alumnos.idalumno FROM alumnos INNER JOIN consultas ON alumnos.idalumno = consultas.ida WHERE consultas.fecha BETWEEN '2021-06-01' AND '2021-09-30';
+

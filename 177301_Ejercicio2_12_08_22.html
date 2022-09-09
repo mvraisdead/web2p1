@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <script>
+            let cadena = prompt("Escribe algo: ");
+            var palabras = cadena.split(" ");
+            var pal = ""; 
+            var i;
+            var tam;
+            for (i = 0; i < palabras.length; i++){
+                pal = palabras[i].split("");
+                tam = pal.length;
+                pal[0] = pal[0].toUpperCase();
+                pal[tam-1] = pal[tam-1].toUpperCase();
+                palabras[i] = pal.join("");
+            }
+            cadena = palabras.join(" ")
+            alert(cadena);
+        </script>
+    </head>
+    <body>
+    </body>
+</html>
